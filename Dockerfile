@@ -14,4 +14,4 @@ RUN chmod +x /opt/start.sh
 
 EXPOSE 22
 
-CMD    ["/start.sh"]
+CMD    ["/opt/start.sh"]
