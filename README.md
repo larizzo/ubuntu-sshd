@@ -13,7 +13,7 @@ Image specific:
 
 Config:
 
-  - `PermitRootLogin no`
+  - `PermitRootLogin yes`
   - `UsePAM no`
   - exposed port 22
   - default command: `/usr/sbin/sshd -D`
