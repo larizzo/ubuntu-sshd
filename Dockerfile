@@ -12,4 +12,4 @@ RUN sed -ri 's/^PermitEmptyPasswords\s+.*/PermitEmptyPasswords yes/' /etc/ssh/ss
 
 EXPOSE 22
 
-CMD    ["start.sh"]
+CMD    ["/start.sh"]
