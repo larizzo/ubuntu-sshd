@@ -8,10 +8,10 @@ RUN mkdir /var/run/sshd
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin no/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN sed -ri 's/^PasswordAuthentication\s+.*/PasswordAuthentication no/' /etc/ssh/sshd_config
-RUN sed -ri 's/^PermitEmptyPasswords\s+.*/PermitEmptyPasswords yes/' /etc/ssh/sshd_config
 
-COPY start.sh /opt/
+ADD ./start.sh /opt/start.sh
 RUN chmod +x /opt/start.sh
+
 EXPOSE 22
 
 CMD    ["/start.sh"]
